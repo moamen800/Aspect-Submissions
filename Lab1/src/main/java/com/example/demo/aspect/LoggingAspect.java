@@ -11,6 +11,6 @@ public class LoggingAspect {
 
     @Before("execution(* com.example.demo.controllers.Controller.*(..))")  // FIXED
     public void logBefore(JoinPoint joinPoint) {
-        System.out.println(">>> Aspect Triggered Before Method: " + joinPoint.getSignature().getName());
+        System.out.println(">>> LoggingAspect: Executing before method - " + joinPoint.getSignature().getName());
     }
 }

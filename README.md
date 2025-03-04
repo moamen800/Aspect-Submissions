@@ -91,7 +91,7 @@ public class LoggingAspect {
 
     @Before("execution(* com.example.demo.controllers.Controller.*(..))")  // FIXED
     public void logBefore(JoinPoint joinPoint) {
-        System.out.println(">>> Aspect Triggered Before Method: " + joinPoint.getSignature().getName());
+        System.out.println(">>> LoggingAspect: Executing before method - " + joinPoint.getSignature().getName());
     }
 }
 ```
@@ -100,7 +100,7 @@ public class LoggingAspect {
 - `@Component` makes it a Spring-managed bean.
 - `@Before("execution(* com.example.demo.controllers.Controller.*(..))")` ensures that `logBefore` is executed **before any method in the `Controller` class is invoked**.
 - `JoinPoint joinPoint` provides details about the intercepted method.
-- `System.out.println(">>> Aspect Triggered Before Method: " + joinPoint.getSignature().getName());` prints the method name before execution.
+- ` System.out.println(">>> LoggingAspect: Executing before method - " + joinPoint.getSignature().getName());` prints the method name before execution.
 
 ---
 
@@ -125,10 +125,10 @@ Use **Postman** to test the API by sending the following requests:
 ### **Console Output (Aspect Triggered Logs)**
 Whenever an API request is made, the aspect logs the method call:
 ```
->>> Aspect Triggered Before Method: getData
->>> Aspect Triggered Before Method: postData
->>> Aspect Triggered Before Method: putData
->>> Aspect Triggered Before Method: deleteData
+>>> LoggingAspect: Executing before method - getData
+>>> LoggingAspect: Executing before method - postData
+>>> LoggingAspect: Executing before method - putData
+>>> LoggingAspect: Executing before method - deleteData
 ```
 
 ---
