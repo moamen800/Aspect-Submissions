@@ -1,24 +1,77 @@
-# Compiled class file
+# ============================================
+# 🔧 Java / Maven / Spring Boot / IntelliJ / Docker / macOS
+# ============================================
+
+# === Compiled files ===
 *.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
 *.jar
 *.war
-*.nar
 *.ear
+
+# === Logs ===
+*.log
+
+# === Temporary files ===
+*.tmp
+*.swp
+*.swo
+
+# === Maven ===
+/target/
+/.mvn/
+mvnw
+mvnw.cmd
+
+# === IntelliJ IDEA ===
+.idea/
+*.iml
+*.iws
+*.ipr
+*.bak
+*.orig
+
+# === VSCode ===
+.vscode/
+
+# === OS-specific ===
+.DS_Store
+Thumbs.db
+
+# === Spring Boot dev tools ===
+.spring-boot-devtools.properties
+
+# === Environment / credentials ===
+.env
+*.key
+*.pem
+*.crt
+
+# === Docker ===
+*.tar
+docker-compose.override.yml
+
+# === Postman ===
+*.postman_collection.json
+*.postman_environment.json
+
+# === ZIP and Archives ===
 *.zip
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# === Database dumps ===
+*.sql
+*.db
+
+# === Node modules (if accidentally used) ===
+node_modules/
+
+# === Backup files ===
+*~
+*.bak
+
+# === JetBrains Workspace Storage ===
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/shelf/
